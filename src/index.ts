@@ -1,5 +1,4 @@
 import {Application} from 'pixi.js';
-
 import {Board} from "./TicTacToe/Board/Board"
 
 new class Main {

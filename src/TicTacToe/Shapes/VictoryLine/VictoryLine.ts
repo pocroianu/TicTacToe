@@ -1,4 +1,3 @@
-import {BasicStrategy} from "../../Strategy/BasicStrategy";
 import {basicShape} from "../BasicShape/BasicShape";
 import {SmallRectangle} from "../../Rectangles/SmallRectangle";
 
@@ -13,7 +12,7 @@ export class VictoryLine extends basicShape {
      * @param endRectangle
      * @param type -> there are 4 line types : horizontal,vertical,oblique1 and oblique2
      */
-    constructor(startRectangle: SmallRectangle, endRectangle: SmallRectangle, color:number,type: string) {
+    constructor(startRectangle: SmallRectangle, endRectangle: SmallRectangle, color: number, type: string) {
         super();
         this.graphics.lineStyle(27, color, 0.6);
         switch (type) {
