@@ -31,6 +31,7 @@ export class Board {
         this.playAgainButton = new Button(790, 500, 120, 80, this.stage);
         this.playAgainButton.onClickHandler = this.resetBoard.bind(this);
 
+
         this.createRectangles(x, y, width, height);
         this.strategy = new RandomStrategy(this.BoardRectangles, this.playerTurn, this.stage);
     }

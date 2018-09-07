@@ -80,7 +80,7 @@ export class SmallRectangle {
     /**
      * Handler responsible for the PlayerOne's mouseclick
      */
-    public handleMouseDown() :void {
+    public handleMouseDown() : void {
 
         if (this.checked === -1) {
             if (this.onClickhandler1.call(this))
