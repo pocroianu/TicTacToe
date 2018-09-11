@@ -1,8 +1,5 @@
 ## What it is?
-It's a boilerplate to show how to use PIXI.js with Typescript (& Yarn).
-Feel free to use it for your own PIXI.js projects.
-
-## Getting started with Typescript & PIXI.js
+A simple TictacToe using pixi graphics.You can play against the CPU.
 
 **Install & build**  
 - **`yarn`** - Install dependencies
