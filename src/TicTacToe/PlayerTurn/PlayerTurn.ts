@@ -2,7 +2,6 @@
  * Used to store that players turns,to change the turn and to end the game.
  */
 export class PlayerTurn {
-
     public turn: string;
     public stage: PIXI.Container;
     public text: PIXI.Text;
@@ -40,8 +39,7 @@ export class PlayerTurn {
             this.turn = 'PlayerTwo';
             this.text.style.fill = 0x00ff00;
             this.text.text = this.turn + ' is thinking';
-        }
-        else if (this.turn === 'PlayerTwo') {
+        } else if (this.turn === 'PlayerTwo') {
             this.turn = 'PlayerOne';
             this.text.style.fill = 0xff1010;
             this.text.text = this.turn;
@@ -74,4 +72,3 @@ export class PlayerTurn {
         this.swapPlayerTurn();
     }
 }
-//asdasdasdad

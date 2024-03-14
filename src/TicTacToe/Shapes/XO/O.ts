@@ -14,8 +14,7 @@ export class O extends basicShape {
      */
     constructor(xPosition: number, yPosition: number, rectangleWidth: number, rectangleHeight) {
         super();
-        this.graphics.lineStyle(12,0x00ff00);
-        this.graphics.drawCircle(xPosition+100,yPosition+100,60);
-
+        this.graphics.lineStyle(12, 0x00ff00);
+        this.graphics.drawCircle(xPosition + 100, yPosition + 100, 60);
     }
 }

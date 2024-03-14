@@ -4,7 +4,6 @@ import {basicShape} from "../BasicShape/BasicShape";
  * Responsible for drawing the X inside a small rectangle
  */
 export class X extends basicShape {
-
     /**
      * @param xPosition
      * @param yPosition

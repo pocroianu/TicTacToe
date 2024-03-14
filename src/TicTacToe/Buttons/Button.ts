@@ -2,7 +2,6 @@
  * A simple rectangle that can be clicked
  */
 export class Button {
-
     public graphics: PIXI.Graphics;
     public text: PIXI.Text;
     public onClickHandler: Function;
@@ -17,7 +16,6 @@ export class Button {
      * @param stage
      */
     public constructor(x: number, y: number, width: number, height: number, stage: PIXI.Container) {
-
         this.sprite = PIXI.Sprite.fromImage('images/TicTacToe/button_play_again.png');
         this.sprite.interactive = true;
         this.sprite.buttonMode = true;

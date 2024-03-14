@@ -7,7 +7,6 @@ import {O} from "../Shapes/XO/O";
  * Small rectangle class
  */
 export class SmallRectangle {
-
     public x: number;
     public y: number;
     public width: number;
@@ -15,10 +14,11 @@ export class SmallRectangle {
 
     public stage: PIXI.Container;
     public graphics: PIXI.Graphics;
-    public onClickhandler1: Function;
+    public onClickHandler1: Function;
     public onClickHandler2: Function;
 
-    public checked: number; /** -1 is for unchecked,0 is for O checked and 1 is for X checked */
+    public checked: number;
+    /** -1 is for unchecked,0 is for O checked and 1 is for X checked */
     public XO: basicShape;
 
     /**
@@ -53,7 +53,7 @@ export class SmallRectangle {
     /**
      * Method used for drawing the X inside a small rectangle
      */
-    public drawX():void {
+    public drawX(): void {
         this.checked = 1;
         this.XO = new X(this.x, this.y, this.width, this.height);
         this.stage.addChild(this.XO.graphics);
@@ -63,7 +63,7 @@ export class SmallRectangle {
     /**
      * Method used for drawing the O inside a small rectangle
      */
-    public drawO() :void {
+    public drawO(): void {
         this.checked = 0;
         this.XO = new O(this.x, this.y, this.width, this.height);
         this.stage.addChild(this.XO.graphics);
@@ -72,7 +72,7 @@ export class SmallRectangle {
     /**
      * Removes the X or the O from the Board
      */
-    public removeXO() :void {
+    public removeXO(): void {
         this.checked = -1;
         this.stage.removeChild(this.XO.graphics);
     }
@@ -80,10 +80,10 @@ export class SmallRectangle {
     /**
      * Handler responsible for the PlayerOne's mouseclick
      */
-    public handleMouseDown() : void {
+    public handleMouseDown(): void {
 
         if (this.checked === -1) {
-            if (this.onClickhandler1.call(this))
+            if (this.onClickHandler1.call(this))
                 this.drawX();
         }
         this.onClickHandler2.call(this);

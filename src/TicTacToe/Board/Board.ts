@@ -8,7 +8,6 @@ import {Button} from "../Buttons/Button";
  * The upper class that creates the 9 rectangles
  */
 export class Board {
-
     public app: Application;
     public BoardRectangles: Array<SmallRectangle>;
     public strategy: RandomStrategy;
@@ -83,7 +82,7 @@ export class Board {
      * @param width -> the width of the board
      * @param height -> the height of the board
      */
-    private createRectangles(x: number, y: number, width: number, height: number) : void  {
+    private createRectangles(x: number, y: number, width: number, height: number): void {
         let newXPosition: number = x,
             newYPosition: number = y,
             rectangle: SmallRectangle;
@@ -91,7 +90,7 @@ export class Board {
         for (let i = 1; i <= 9; i++) {
 
             rectangle = new SmallRectangle(newXPosition, newYPosition, width / 3, height / 3, this.stage);
-            rectangle.onClickhandler1 = this.communicateForPlayer1.bind(this);
+            rectangle.onClickHandler1 = this.communicateForPlayer1.bind(this);
             rectangle.onClickHandler2 = this.communicateForPlayer2.bind(this);
             this.BoardRectangles.push(rectangle);
             newXPosition += width / 3;

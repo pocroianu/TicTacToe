@@ -8,11 +8,10 @@
     "build": "webpack",
     "build:watch": "webpack --watch"
   },
-  "author": "Arvo Saalits",
+  "author": "Geani Pocroianu",
   "license": "ISC",
   "dependencies": {
     "awesome-typescript-loader": "^3.1.2",
-    "pixi-spine": "^1.5.16",
     "pixi.js": "^4.5.4",
     "webpack-cli": "^3.1.0"
   },

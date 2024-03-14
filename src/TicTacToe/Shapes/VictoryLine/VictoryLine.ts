@@ -10,6 +10,7 @@ export class VictoryLine extends basicShape {
     /**
      * @param startRectangle
      * @param endRectangle
+     * @param color
      * @param type -> there are 4 line types : horizontal,vertical,oblique1 and oblique2
      */
     constructor(startRectangle: SmallRectangle, endRectangle: SmallRectangle, color: number, type: string) {

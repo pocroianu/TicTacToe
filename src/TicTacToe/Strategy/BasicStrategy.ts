@@ -49,6 +49,7 @@ export class BasicStrategy {
      * Calls an instance of the victory line
      * @param rectangle1 -> where the line should begin
      * @param rectangle2 -> where the line should end
+     * @param color
      * @param type -> there are 4 types : horizontal line,vertical line,oblique1 line and oblique2 line
      * @param winner -> who won the game : X is for PlayerOne and O is for PlayerTwo
      */
@@ -57,7 +58,6 @@ export class BasicStrategy {
         this.winner = winner;
         let victoryLine: VictoryLine = new VictoryLine(this.boardRectangles[rectangle1], this.boardRectangles[rectangle2], color, type);
         this.linesContainer.addChild(victoryLine.graphics);
-
     };
 
     /**
@@ -139,8 +139,7 @@ export class BasicStrategy {
             this.playerTurn.gameWon();
             if (this.winner === 'X') {
                 this.textObject.text.text = 'The winner is PlayerOne';
-            }
-            else if (this.winner === 'O') {
+            } else if (this.winner === 'O') {
                 this.textObject.text.text = 'The winner is PlayerTwo';
             }
             this.GameScore.updateScore(this.winner);
@@ -169,7 +168,6 @@ export class BasicStrategy {
      * Method used for checking if one of the players won the game
      */
     public checkWinner(): void {
-
         this.checkHorizontally();
         this.checkVertically();
         this.checkObliques();
@@ -189,7 +187,5 @@ export class BasicStrategy {
         if (this.linesContainer) {
             this.linesContainer.removeChildren();
         }
-        // this.victoryLines = null;
-
     }
 }

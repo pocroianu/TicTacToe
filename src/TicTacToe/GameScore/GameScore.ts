@@ -4,7 +4,6 @@ import {BasicText} from "../text/BasicText";
  * Class that keeps the game's score
  */
 export class GameScore {
-
     public scorePlayerOne: number;
     public scorePlayerTwo: number;
     public textPlayer1: BasicText;
@@ -17,7 +16,6 @@ export class GameScore {
      * @param stage
      */
     public constructor(stage: PIXI.Container) {
-
         this.scorePlayerOne = 0;
         this.scorePlayerTwo = 0;
         this.WinsLossesDrawsPlayerOne = [0, 0, 0];
@@ -43,7 +41,6 @@ export class GameScore {
      * @param gameWinner
      */
     public updateScore(gameWinner: string): void {
-
         switch (gameWinner) {
             case 'X':
                 this.scorePlayerOne += 3;
@@ -87,7 +84,6 @@ export class GameScore {
      * Updates the text for both players
      */
     public updateText(): void {
-
         this.updateTextP1();
         this.updateTextP2();
     }

@@ -1,14 +1,13 @@
 /**
  * Superclass Shape
  */
-export class basicShape{
+export class basicShape {
+    graphics: PIXI.Graphics;
 
-    graphics : PIXI.Graphics;
+    constructor() {
 
-    constructor(){
-
-        this.graphics=new PIXI.Graphics();
-        this.graphics.lineStyle(13,0xff0000);
+        this.graphics = new PIXI.Graphics();
+        this.graphics.lineStyle(13, 0xff0000);
 
     }
 
